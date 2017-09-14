@@ -18,9 +18,9 @@
         <td><%= stock.ticker %></td>
         <td><%= stock.name %></td>
         <td><%= number_to_currency(stock.price) %></td>
-        <td><%= link_to 'Show', stock %></td>
-        <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
-        <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', stock, class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', stock, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
 <!--
@@ -41,5 +41,9 @@
 
 <br>
 
+<!--
 <%= link_to 'New Stock', new_stock_path %>
+-->
+
+<%= link_to 'New Stock', new_stock_path, class: "btn btn-success" %>
 
