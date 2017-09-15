@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Stocks</h1>
-
-<tr class="container">
-<table class="table table-striped">
+<div class="container">
+  <h1>Stocks</h1>
+  <table class="table table-striped table-hover">
   <thead>
     <tr>
       <th>Ticker</th>
       <th>Name</th>
-      <th>Price</th>
+      <th class="text-right">Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,33 +16,13 @@
       <tr>
         <td><%= stock.ticker %></td>
         <td><%= stock.name %></td>
-        <td><%= number_to_currency(stock.price) %></td>
+        <td class="text-right"><%= number_to_currency(stock.price) %></td>
         <td><%= link_to 'Show', stock, class: "btn btn-info" %></td>
         <td><%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-warning' %></td>
         <td><%= link_to 'Destroy', stock, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
-<!--
-    <% @stocks.each do |stock| %>
-        <div class="row">
-          <div class="col-md-6"><%= stock.ticker %></div>
-          <div class="col-md-6"><%= stock.name %></div>
-          <div class="col-md-6 text-xs-right"><%= number_to_currency(stock.price) %></div>
-          <div class="col-md-6"><%= link_to 'Show', stock %></div>
-          <div class="col-md-6"><%= link_to 'Edit', edit_stock_path(stock) %></div>
-          <div class="col-md-6"><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        </div>
-    <% end %>
--->
   </tbody>
-</table>
+  </table>
+  <%= link_to 'New Stock', new_stock_path, class: "btn btn-success" %>
 </div>
-
-<br>
-
-<!--
-<%= link_to 'New Stock', new_stock_path %>
--->
-
-<%= link_to 'New Stock', new_stock_path, class: "btn btn-success" %>
-
