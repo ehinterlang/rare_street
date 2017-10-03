@@ -8,7 +8,10 @@
       <th>Ticker</th>
       <th>Name</th>
       <th class="text-right">Price</th>
-      <th colspan="3"></th>
+      <th class="text-center">Date</th>
+      <th></th>
+      <th>Action</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -17,14 +20,20 @@
         <td><%= stock.ticker %></td>
         <td><%= stock.name %></td>
         <td class="text-right"><%= number_to_currency(stock.price) %></td>
-        <td class='btn-group'>
-          <button type='button'><%= link_to 'Show', stock, class: 'btn btn-info btn-sm' %></button>
-          <button type='button'><%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-warning btn-sm' %></button>
-          <button type='button'><%= link_to 'Destroy', stock, class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        <td class="text-center"><%= Date.today %></td>
+        <td colspan="3">
+          <div class='btn-group'>
+            <button type='button'><%= link_to 'Show', stock, class: 'btn btn-info btn-sm' %></button>
+            <button type='button'><%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-warning btn-sm' %></button>
+            <button type='button'><%= link_to 'Destroy', stock, class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          </div>
         </td>
       </tr>
   <% end %>
   </tbody>
   </table>
-  <%= link_to 'New Stock', new_stock_path, class: 'btn btn-success' %>
+  <div class='btn-group'>
+    <button type="button"><%= link_to 'New Stock', new_stock_path, class: 'btn btn-success' %></button>
+  </div>
+  <hr>
 </div>
