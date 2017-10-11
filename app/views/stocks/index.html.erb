@@ -20,7 +20,7 @@
         <td><%= stock.ticker %></td>
         <td><%= stock.name %></td>
         <td class="text-right"><%= number_to_currency(stock.price) %></td>
-        <td class="text-center"><%= Date.today %></td>
+        <td class="text-center"><%= stock.updated_at %></td>
         <td colspan="3">
           <div class='btn-group'>
             <button type='button'><%= link_to 'Show', stock, class: 'btn btn-info btn-sm' %></button>

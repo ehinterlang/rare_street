@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Ticker:</strong>
-  <%= @stock.ticker %>
-</p>
+<div class="jumbotron">
+  <h1><%= @stock.name %></h1>
+  <hr>
+  <p>
+    <strong>Ticker:</strong>
+    <%= @stock.ticker %>
+  </p>
+  <hr>
+  <p>
+    <div class='btn-group'>
+      <button type="button"><%= link_to 'Edit', edit_stock_path(@stock), class: 'btn btn-warning' %></button>
+      <button type="button"><%= link_to 'List Stocks', stocks_path, class: 'btn btn-info' %></button>
+    </div>
+  </p>
+</div>
 
 <p>
-  <strong>Name:</strong>
-  <%= @stock.name %>
-</p>
-
-<p>
-  <strong>Price:</strong>
+  <strong>Latest Price:</strong>
   <%= number_to_currency(@stock.price) %>
 </p>
-
-<%= link_to 'Edit', edit_stock_path(@stock) %> |
-<%= link_to 'Back', stocks_path %>
