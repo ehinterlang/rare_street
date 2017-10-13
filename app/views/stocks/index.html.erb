@@ -23,9 +23,9 @@
         <td class="text-center"><%= stock.updated_at %></td>
         <td colspan="3">
           <div class='btn-group'>
-            <button type='button'><%= link_to 'Show', stock, class: 'btn btn-info btn-sm' %></button>
-            <button type='button'><%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-warning btn-sm' %></button>
-            <button type='button'><%= link_to 'Destroy', stock, class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            <%= link_to 'Show', stock, class: 'btn btn-info btn-sm' %>
+            <%= link_to 'Edit', edit_stock_path(stock), class: 'btn btn-warning btn-sm' %>
+            <%= link_to 'Destroy', stock, class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %>
           </div>
         </td>
       </tr>
@@ -33,7 +33,7 @@
   </tbody>
   </table>
   <div class='btn-group'>
-    <button type="button"><%= link_to 'New Stock', new_stock_path, class: 'btn btn-success' %></button>
+    <%= link_to 'New Stock', new_stock_path, class: 'btn btn-success' %>
   </div>
   <hr>
 </div>

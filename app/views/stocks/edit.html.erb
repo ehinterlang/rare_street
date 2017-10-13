@@ -3,6 +3,6 @@
 <%= render 'form', stock: @stock %>
 
 <div class='btn-group'>
-  <button type="button"><%= link_to 'Show', @stock, class: 'btn btn-info' %></button>
-  <button type="button"><%= link_to 'List Stocks', stocks_path, class: 'btn btn-info' %></button>
+  <%= link_to 'Show', @stock, class: 'btn btn-info' %>
+  <%= link_to 'List Stocks', stocks_path, class: 'btn btn-info' %>
 </div>
