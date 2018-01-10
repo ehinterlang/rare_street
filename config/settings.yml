@@ -1,0 +1,13 @@
+default: &defaults
+  items:
+    - key: pricing_host
+    - key: pricing_apikey
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+test:
+  <<: *defaults
