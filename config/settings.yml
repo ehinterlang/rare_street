@@ -2,6 +2,8 @@ default: &defaults
   items:
     - key: pricing_host
     - key: pricing_apikey
+    - key: good_setting
+    - key: another_setting
 
 development:
   <<: *defaults

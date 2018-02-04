@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: rare_street_production
-  username: rare_street
+  username: <%= ENV['RARE_STREET_DATABASE_USERNAME'] %>
   password: <%= ENV['RARE_STREET_DATABASE_PASSWORD'] %>
